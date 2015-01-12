@@ -1,25 +1,234 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="z7e-Ch-pD2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Navigation Controller-->
+        <scene sceneID="cS8-aE-Eqg">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i6U-5T-oHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="VFM-C1-shz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e3K-lE-GZh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-126" y="393"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jbM-2a-zgv">
+            <objects>
+                <viewController id="z7e-Ch-pD2" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="D1C-aq-OTM"/>
+                        <viewControllerLayoutGuide type="bottom" id="LXU-CC-CXr"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="8Dl-mL-80d">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAl-73-Zmf">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Barcelona" id="o8t-SE-jkQ">
+                                        <barButtonItem key="rightBarButtonItem" title="Message" id="OFu-kO-e5t">
+                                            <connections>
+                                                <segue destination="whw-SA-wmM" kind="show" id="mhS-Q3-vMU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="barcabuildings" translatesAutoresizingMaskIntoConstraints="NO" id="i4L-7i-Txc">
+                                <rect key="frame" x="0.0" y="72" width="600" height="528"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i4L-7i-Txc" firstAttribute="trailing" secondItem="PAl-73-Zmf" secondAttribute="trailing" id="0Wc-Yw-WFR"/>
+                            <constraint firstAttribute="trailing" secondItem="PAl-73-Zmf" secondAttribute="trailing" id="8Cp-7o-oa5"/>
+                            <constraint firstItem="PAl-73-Zmf" firstAttribute="top" secondItem="D1C-aq-OTM" secondAttribute="bottom" constant="8" id="CMz-Oq-9iw"/>
+                            <constraint firstItem="i4L-7i-Txc" firstAttribute="leading" secondItem="PAl-73-Zmf" secondAttribute="leading" id="Ido-L9-CSY"/>
+                            <constraint firstItem="i4L-7i-Txc" firstAttribute="bottom" secondItem="LXU-CC-CXr" secondAttribute="top" id="U9o-yq-CiM"/>
+                            <constraint firstItem="i4L-7i-Txc" firstAttribute="top" secondItem="PAl-73-Zmf" secondAttribute="bottom" id="inL-qB-vsR"/>
+                            <constraint firstItem="i4L-7i-Txc" firstAttribute="leading" secondItem="8Dl-mL-80d" secondAttribute="leading" id="tfD-GR-REZ"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EfW-pc-wqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="516" y="412"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EOf-yd-HMc">
+            <objects>
+                <viewController id="whw-SA-wmM" customClass="ViewController" customModule="Postcard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="acv-Qo-nll"/>
+                        <viewControllerLayoutGuide type="bottom" id="4K2-iY-RfP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JCQ-CW-IGN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="190-lG-Hil">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="8wS-M8-4HX"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="bEI-7d-QMQ"/>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8wS-M8-4HX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8wS-M8-4HX"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="on9-zY-jZa">
+                                <rect key="frame" x="65" y="72" width="356" height="101"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Download-Green-Background-Flowers-Wallpaper-Dekstop" translatesAutoresizingMaskIntoConstraints="NO" id="7wE-eZ-44E">
+                                <rect key="frame" x="440" y="125" width="144" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="POG-ae-TDa"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="POG-ae-TDa"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="POG-ae-TDa"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zwp-98-n8r">
+                                <rect key="frame" x="158" y="247" width="284" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ztm-XL-yqB">
+                                <rect key="frame" x="158" y="295" width="284" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkZ-9S-j78">
+                                <rect key="frame" x="158" y="188" width="258" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6JW-Sd-ZeE"/>
+                                </constraints>
+                                <state key="normal" title="Send Mail">
+                                    <color key="titleColor" red="0.9913312715" green="0.99448221709999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6JW-Sd-ZeE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="6JW-Sd-ZeE"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="sendMailButtonPressed:" destination="whw-SA-wmM" eventType="touchUpInside" id="esm-f4-ajz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BkZ-9S-j78" firstAttribute="leading" secondItem="JCQ-CW-IGN" secondAttribute="leadingMargin" constant="55" id="5Ed-IM-5NB"/>
+                            <constraint firstItem="BkZ-9S-j78" firstAttribute="top" secondItem="on9-zY-jZa" secondAttribute="bottom" constant="8" symbolic="YES" id="5La-dp-iGw"/>
+                            <constraint firstItem="7wE-eZ-44E" firstAttribute="top" secondItem="190-lG-Hil" secondAttribute="bottom" constant="61" id="5vV-t5-b74"/>
+                            <constraint firstItem="zwp-98-n8r" firstAttribute="top" secondItem="BkZ-9S-j78" secondAttribute="bottom" constant="14" id="8g2-Oz-xbL"/>
+                            <constraint firstItem="on9-zY-jZa" firstAttribute="top" secondItem="190-lG-Hil" secondAttribute="bottom" constant="8" id="9Hv-B5-Zyo"/>
+                            <constraint firstItem="BkZ-9S-j78" firstAttribute="centerX" secondItem="JCQ-CW-IGN" secondAttribute="centerX" id="Cx8-dk-2xm"/>
+                            <constraint firstItem="zwp-98-n8r" firstAttribute="trailing" secondItem="ztm-XL-yqB" secondAttribute="trailing" id="HX5-mJ-vUD"/>
+                            <constraint firstItem="on9-zY-jZa" firstAttribute="leading" secondItem="JCQ-CW-IGN" secondAttribute="leadingMargin" constant="29" id="Ibh-o2-STt"/>
+                            <constraint firstItem="4K2-iY-RfP" firstAttribute="top" secondItem="ztm-XL-yqB" secondAttribute="bottom" constant="279" id="MRu-q8-7cM"/>
+                            <constraint firstItem="7wE-eZ-44E" firstAttribute="leading" secondItem="on9-zY-jZa" secondAttribute="trailing" constant="98" id="UPu-VO-yJF"/>
+                            <constraint firstItem="on9-zY-jZa" firstAttribute="trailing" secondItem="zwp-98-n8r" secondAttribute="trailing" id="Y5a-zC-khr"/>
+                            <constraint firstItem="ztm-XL-yqB" firstAttribute="leading" secondItem="zwp-98-n8r" secondAttribute="leading" id="eHm-ia-BWn"/>
+                            <constraint firstItem="zwp-98-n8r" firstAttribute="leading" secondItem="JCQ-CW-IGN" secondAttribute="leadingMargin" constant="42" id="pff-ij-8aY"/>
+                            <constraint firstItem="BkZ-9S-j78" firstAttribute="centerX" secondItem="zwp-98-n8r" secondAttribute="centerX" id="s7Y-Xa-r7k"/>
+                            <constraint firstItem="190-lG-Hil" firstAttribute="leading" secondItem="JCQ-CW-IGN" secondAttribute="leading" id="sDE-PL-alX"/>
+                            <constraint firstItem="ztm-XL-yqB" firstAttribute="top" secondItem="zwp-98-n8r" secondAttribute="bottom" constant="22" id="tdM-vr-74c"/>
+                            <constraint firstItem="190-lG-Hil" firstAttribute="top" secondItem="acv-Qo-nll" secondAttribute="bottom" id="umE-5m-GQy"/>
+                            <constraint firstItem="BkZ-9S-j78" firstAttribute="bottom" secondItem="7wE-eZ-44E" secondAttribute="bottom" id="vz3-ty-kJy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="sDE-PL-alX"/>
+                                <exclude reference="umE-5m-GQy"/>
+                                <exclude reference="9Hv-B5-Zyo"/>
+                                <exclude reference="Ibh-o2-STt"/>
+                                <exclude reference="Y5a-zC-khr"/>
+                                <exclude reference="5Ed-IM-5NB"/>
+                                <exclude reference="5La-dp-iGw"/>
+                                <exclude reference="Cx8-dk-2xm"/>
+                                <exclude reference="s7Y-Xa-r7k"/>
+                                <exclude reference="vz3-ty-kJy"/>
+                                <exclude reference="8g2-Oz-xbL"/>
+                                <exclude reference="HX5-mJ-vUD"/>
+                                <exclude reference="pff-ij-8aY"/>
+                                <exclude reference="eHm-ia-BWn"/>
+                                <exclude reference="tdM-vr-74c"/>
+                                <exclude reference="5vV-t5-b74"/>
+                                <exclude reference="UPu-VO-yJF"/>
+                                <exclude reference="MRu-q8-7cM"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="sDE-PL-alX"/>
+                                <include reference="umE-5m-GQy"/>
+                                <include reference="9Hv-B5-Zyo"/>
+                                <include reference="Ibh-o2-STt"/>
+                                <include reference="Y5a-zC-khr"/>
+                                <include reference="5Ed-IM-5NB"/>
+                                <include reference="5La-dp-iGw"/>
+                                <include reference="Cx8-dk-2xm"/>
+                                <include reference="s7Y-Xa-r7k"/>
+                                <include reference="vz3-ty-kJy"/>
+                                <include reference="8g2-Oz-xbL"/>
+                                <include reference="HX5-mJ-vUD"/>
+                                <include reference="pff-ij-8aY"/>
+                                <include reference="eHm-ia-BWn"/>
+                                <include reference="tdM-vr-74c"/>
+                                <include reference="5vV-t5-b74"/>
+                                <include reference="UPu-VO-yJF"/>
+                                <include reference="MRu-q8-7cM"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="enterMessageTextField" destination="ztm-XL-yqB" id="kfH-lK-8KH"/>
+                        <outlet property="enterNameTextField" destination="zwp-98-n8r" id="QcK-n8-C4i"/>
+                        <outlet property="mailButton" destination="BkZ-9S-j78" id="HRK-od-5Uu"/>
+                        <outlet property="messageLabel" destination="on9-zY-jZa" id="Zhb-lz-Gk4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RbK-jb-2UO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1161" y="412"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Download-Green-Background-Flowers-Wallpaper-Dekstop" width="2880" height="1800"/>
+        <image name="barcabuildings" width="4148" height="2765"/>
+    </resources>
 </document>
